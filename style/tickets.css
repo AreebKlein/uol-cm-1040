@@ -1,0 +1,172 @@
+/* Reset and base styles */
+* {
+    margin: 0; /* Removes default margins from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Includes padding and border in element's total width and height calculation */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Sets the default font for the entire page to Arial, with sans-serif as a fallback */
+    line-height: 1.6; /* Sets the line height to 1.6 times the font size for better readability */
+    color: #333; /* Sets the default text color to a dark gray */
+    background-color: #f4f4f4; /* Sets the background color for the entire page to a light gray */
+}
+
+/* Header styles */
+.logo-container {
+    display: flex; /* Uses flexbox for layout of the logo container */
+    align-items: center; /* Vertically centers items within the logo container */
+}
+
+.logo {
+    width: 50px; /* Sets the width of the logo to 50 pixels */
+    height: auto; /* Allows the height to adjust proportionally to the width */
+    margin-right: 1rem; /* Adds space to the right of the logo */
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Sets font size for the logo text to 1.5 times the root element's font size */
+    font-weight: bold; /* Makes the logo text bold */
+}
+
+.action-icons {
+    display: flex; /* Uses flexbox for layout of action icons */
+    justify-content: flex-end; /* Aligns items to the right of the container */
+    align-items: center; /* Vertically centers items within the container */
+}
+
+.cart-icon, .search-icon {
+    font-size: 1.2rem; /* Sets font size for icons to 1.2 times the root element's font size */
+    margin-left: 1rem; /* Adds space to the left of each icon */
+    cursor: pointer; /* Changes cursor to pointer on hover, indicating clickability */
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px; /* Sets a maximum width for the main content */
+    margin: 0 auto; /* Centers the main content horizontally */
+    padding: 2rem; /* Adds space around the main content */
+}
+
+section {
+    background-color: #fff; /* Sets background color of sections to white */
+    border-radius: 8px; /* Rounds the corners of the sections */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    margin-bottom: 2rem; /* Adds space below each section */
+    padding: 2rem; /* Adds space inside each section */
+}
+
+h1, h2, h3 {
+    color: #1a237e; /* Sets color of headings to a dark blue */
+    margin-bottom: 1rem; /* Adds space below headings */
+}
+
+/* Grid layout for ticket options and other sections */
+.grid {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive grid layout */
+    gap: 2rem; /* Adds space between grid items */
+}
+
+.grid-item {
+    background-color: #fff; /* Sets background color of grid items to white */
+    border-radius: 8px; /* Rounds the corners of grid items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    overflow: hidden; /* Hides any content that exceeds the grid item's dimensions */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: flex; /* Uses flexbox for internal layout */
+    flex-direction: column; /* Stacks flex items vertically */
+    height: 100%; /* Ensures all grid items have the same height */
+    justify-content: space-between; /* Distributes space between flex items */
+    align-items: stretch; /* Stretches flex items to fill the container width */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Styles for images within grid items */
+.grid-item img {
+    width: 100%; /* Makes the image fill the width of its container */
+    height: 200px; /* Sets a fixed height for images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Styles for headings and paragraphs within grid items */
+.grid-item h2, .grid-item h3 {
+    font-size: 1.2rem; /* Sets font size for headings within grid items */
+    padding: 1rem; /* Adds space around headings */
+}
+
+.grid-item p {
+    padding: 0 1rem; /* Adds horizontal padding to paragraphs */
+    flex-grow: 1; /* Allows paragraphs to grow and fill available space */
+}
+
+/* Styles for price display */
+.price {
+    font-weight: bold; /* Makes the price text bold */
+    color: #4caf50; /* Sets the price color to green */
+    font-size: 1.2rem; /* Sets the font size for prices */
+    padding: 0 1rem 1rem; /* Adds padding around prices */
+    align-self: flex-end; /* Aligns the price to the bottom of its container */
+    min-height: 0px; /* Sets minimum height to 0 */
+    max-height: 30px; /* Sets maximum height to 30 pixels */
+}
+
+/* Styles for "Buy Now" buttons */
+.buy-now {
+    display: block; /* Makes the button a block-level element */
+    background-color: #ffd54f; /* Sets the button background color to yellow */
+    color: #1a237e; /* Sets the button text color to dark blue */
+    text-align: center; /* Centers the text within the button */
+    padding: 0.5rem; /* Adds space inside the button */
+    text-decoration: none; /* Removes the default underline from the link */
+    font-weight: bold; /* Makes the button text bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: auto; /* Pushes the button to the bottom of the grid item */
+}
+
+.buy-now:hover {
+    background-color: #ffb300; /* Changes button color on hover */
+}
+
+/* Styles for additional notes */
+.note {
+    font-style: italic; /* Makes the note text italic */
+    margin-top: 1rem; /* Adds space above notes */
+}
+
+/* Styles for pass benefits section */
+.pass-benefits {
+    background-color: #e8eaf6; /* Sets background color for pass benefits section */
+    border-radius: 8px; /* Rounds the corners of the pass benefits section */
+    padding: 1rem; /* Adds space inside the pass benefits section */
+    margin-top: 2rem; /* Adds space above the pass benefits section */
+}
+
+.pass-benefits ul {
+    list-style-type: none; /* Removes default list bullet points */
+    color: black; /* Sets text color to black */
+}
+
+.pass-benefits li:before {
+    content: "✓"; /* Adds a checkmark before each list item */
+    color: #4caf50; /* Sets the checkmark color to green */
+    margin-right: 0.5rem; /* Adds space to the right of the checkmark */
+}
+
+/* Styles for additional info section */
+.additional-info ul {
+    list-style-type: none; /* Removes default list bullet points */
+    color: black; /* Sets text color to black */
+    margin-top: 2rem; /* Adds space above the list */
+}
+
+.additional-info li:before {
+    content: "•"; /* Adds a bullet point before each list item */
+    color: #1a237e; /* Sets the bullet point color to dark blue */
+    margin-right: 0.5rem; /* Adds space to the right of the bullet point */
+}
+
+
